@@ -2,10 +2,10 @@ import { auth } from "@clerk/nextjs/server"
 
 
 export default async function ProfilePage() {
-    const user = await auth()
+    const {userId} = await auth()
     
   return (
-    <div>Welcome to your profile</div>
+    <div>Welcome to your profile, {userId}</div>
   )
 }
 
